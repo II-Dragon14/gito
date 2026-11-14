@@ -1,6 +1,7 @@
 # gito
    > **Note:** To see a nicer polished version of these instructions, follow this [link](https://ilan.bloxxer.dev/gito).
-   >  *Also, if you have time, please visit my [main site](https://ilan.bloxxer.dev). It really helps*
+
+   >  *Also, if you have time, please visit my [main site](https://ilan.bloxxer.dev). It really helps.*
 ## 1. What it does
 
 Normally, saving your work to GitHub takes three commands:
