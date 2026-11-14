@@ -18,22 +18,21 @@ Install and add it to your PATH
 
 Adding gito to your PATH lets you type gito in any folder, in any terminal.
 
-    Install Git first. If git --version already works in a terminal, skip this. Otherwise install Git for Windows from git-scm.com.
+Install Git first. If git --version already works in a terminal, skip this. Otherwise install Git for Windows from git-scm.com.
     Download gito.exe and put it in a folder of its own. Get it from the latest release on GitHub (use the button at the top of this page), then save it somewhere like C:\Tools\gito. Windows may warn about the download because the file isn't code-signed. If you trust it, choose More info, then Run anyway.
     Add that folder to your PATH. Pick one of these:
     Option A: in Windows settings
 
-    Press Win and type environment variables, then open Edit environment variables for your account. Under User variables select Path, click Edit, then New, and paste C:\Tools\gito. Click OK on every window.
+Press Win and type environment variables, then open Edit environment variables for your account. Under User variables select Path, click Edit, then New, and paste C:\Tools\gito. Click OK on every window.
     Option B: one line in PowerShell
-    Copy
     [Environment]::SetEnvironmentVariable("Path", [Environment]::GetEnvironmentVariable("Path","User") + ";C:\Tools\gito", "User")
 
-    This changes only your own account and doesn't need administrator rights. If your folder is somewhere else, change the path in the line above.
+This changes only your own account and doesn't need administrator rights. If your folder is somewhere else, change the path in the line above.
     Open a new terminal and check it works. A terminal that was already open won't see the change.
     Copy
     gito --version
 
-    You should see your Git version, for example git version 2.x. That's gito passing the command through to git. If Windows says gito isn't recognised, the folder isn't on your PATH yet, so check the path you added and reopen the terminal.
+You should see your Git version, for example git version 2.x. That's gito passing the command through to git. If Windows says gito isn't recognised, the folder isn't on your PATH yet, so check the path you added and reopen the terminal.
 
 3
 How to use it
