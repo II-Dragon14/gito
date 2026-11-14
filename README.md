@@ -1,5 +1,5 @@
 # gito
-##What it does
+## What it does
 
 Normally, saving your work to GitHub takes three commands. With gito it's one.
 git add .
@@ -12,7 +12,7 @@ becomes
 gito push "message"
 
 Any other command, such as gito status or gito pull, goes to git exactly as you typed it.
-##Install and add it to your PATH
+## Install and add it to your PATH
 
 Adding gito to your PATH lets you type gito in any folder, in any terminal.
 
@@ -32,7 +32,7 @@ This changes only your own account and doesn't need administrator rights. If you
 You should see your Git version, for example git version 2.x. That's gito passing the command through to git. If Windows says gito isn't recognised, the folder isn't on your PATH yet, so check the path you added and reopen the terminal.
 
 
-##How to use it
+## How to use it
 
 Open a terminal in your project folder, the one that's already a git repository, and run:
 gito push "fix the login button"
@@ -47,7 +47,7 @@ Useful for the first push of a new branch, because -u remembers where it goes ne
 gito status
 Any command that isn't push goes straight to git. The same goes for gito pull, gito log --oneline, gito checkout -b new-branch and the rest.
 
-##Good to know
+## Good to know
 
 A few things that behave in ways you might not expect.
 It stages everything. gito push runs git add ., which includes new files. Check gito status first if you're unsure, and keep a .gitignore for files that must stay private, such as keys and passwords.
