@@ -15,7 +15,7 @@ git push
 With `gito`, it's just one:
 
 ```bash
-gito push "message"
+gito "message"
 ```
 
 Any other command, such as `gito status` or `gito pull`, goes to `git` exactly as you typed it.
@@ -27,7 +27,7 @@ Any other command, such as `gito status` or `gito pull`, goes to `git` exactly a
 Adding `gito` to your PATH lets you type `gito` in any folder, in any terminal.
 
 1. **Install Git first.** If `git --version` already works in a terminal, skip this. Otherwise, install Git for Windows from [git-scm.com](https://git-scm.com).
-2. **Download `gito.exe` and put it in a folder of its own.** Get it from the latest release on GitHub (use the button at the top of this page), then save it somewhere like `C:\Tools\gito`. 
+2. **Download `gito.exe` and put it in a folder of its own.** Get it from the latest release, then save it somewhere like `C:\Tools\gito`. 
    > **Note:** Windows may warn about the download because the file isn't code-signed. If you trust it, choose **More info**, then **Run anyway**.
 3. **Add that folder to your PATH.** Pick one of these options:
 
@@ -53,7 +53,7 @@ Adding `gito` to your PATH lets you type `gito` in any folder, in any terminal.
 Open a terminal in your project folder (the one that's already a git repository) and run:
 
 ```bash
-gito push "fix the login button"
+gito "fix the login button"
 ```
 
 Put your message in quotes. `gito` then stages everything, commits it with that message, and pushes it.
@@ -62,19 +62,19 @@ Put your message in quotes. `gito` then stages everything, commits it with that 
 
 * **Standard commit and push:**
   ```bash
-  gito push "your message"
+  gito "your message"
   ```
   Runs `git add .`, `git commit -m "your message"`, then `git push`.
 
 * **Push to a specific remote and branch:**
   ```bash
-  gito push "your message" origin main
+  gito "your message" origin main
   ```
   Anything after the message is handed to `git push`. Here it pushes to `origin main`.
 
 * **Push a new branch for the first time:**
   ```bash
-  gito push "first commit" -u origin main
+  gito "first commit" -u origin main
   ```
   Useful for the first push of a new branch, because `-u` remembers where it goes next time.
 
@@ -82,7 +82,7 @@ Put your message in quotes. `gito` then stages everything, commits it with that 
   ```bash
   gito status
   ```
-  Any command that isn't `push` goes straight to `git`. The same goes for `gito pull`, `gito log --oneline`, `gito checkout -b new-branch`, and the rest.
+  Any command that does't have quotes goes straight to `git`. The same goes for `gito pull`, `gito log --oneline`, `gito checkout -b new-branch`, and the rest.
 
 ---
 
@@ -90,9 +90,9 @@ Put your message in quotes. `gito` then stages everything, commits it with that 
 
 A few things that behave in ways you might not expect:
 
-* **It stages everything.** `gito push` runs `git add .`, which includes new files. Check `gito status` first if you're unsure, and keep a `.gitignore` for files that must stay private, such as keys and passwords.
+* **It stages everything.** `gito "message"` runs `git add .`, which includes new files. Check `gito status` first if you're unsure, and keep a `.gitignore` for files that must stay private, such as keys and passwords.
 * **Nothing new to commit?** It tells you, then pushes anyway. That's handy for pushing a commit you made earlier.
 * **Staging failures halt execution.** If staging fails, it stops and nothing is committed or pushed.
-* **You must give a message.** Running `gito push` on its own just shows the usage line.
-* **Only the word `push` is special.** Every other command behaves exactly as it does in `git`.
+* **You must give a message.** Running `gito "message"` on its own just shows the usage line.
+* **Only the quotes are special.** Every other command behaves exactly as it does in `git`.
 * **Troubleshooting:** `"git not found"` means Git isn't installed or isn't on your PATH.
